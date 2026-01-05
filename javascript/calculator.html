@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let op=prompt("enter + for addition,- for substraction,* for multiplication, / for division");
+        op=String(op);
+
+        if (op=='+'){
+            let num1=prompt("enter first number:");
+            num1=Number(num1);
+            let num2=prompt ("enter second number:");
+            num2=Number(num2);
+            let sum=num1+num2;
+            // console.log(sum);
+            document.write(sum);
+
+        }
+        else if(op=='-'){
+            let num1=prompt("enter first number:");
+            num1=Number(num1);
+            let num2=prompt ("enter second number:");
+            num2=Number(num2);
+            let sub=num1-num2;
+            console.warn(sub);
+        }
+        else if(op=='*'){
+            let num1=prompt("enter first number:");
+            num1=Number(num1);
+            let num2=prompt ("enter second number:");
+            num2=Number(num2);
+            let product=num1*num2;
+            console.warn(product);
+        }
+        else if (op=='/')   {
+            let num1=prompt("enter first number:");
+            num1=Number(num1);
+            let num2=prompt ("enter second number:");
+            num2=Number(num2);
+            let division=num1/num2;
+            console.warn(division);
+        }
+        else{
+            console.warn("invalid option");
+        }
+
+            </script>
+</body>
+</html>
