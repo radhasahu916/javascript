@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Load Example</title>
+</head>
+<body>
+    <h1 id="myHeading">Original Text</h1>
+
+    <script>
+        // This event fires when the HTML is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select the element by its ID
+            var heading = document.getElementById("myHeading");
+            
+            // Change its text content
+            heading.textContent = "Text Changed on DOM Load!";
+        });
+    </script>
+</body>
+</html>
