@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: rgb(45, 74, 26);
+            color: rgb(206, 196, 196);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="card"></div>
+    <script>
+    const card = document.getElementById("card");
+
+    let div = document.createElement("div");
+    div.className = "info-box";
+
+    let h3 = document.createElement("h3");
+    h3.appendChild(document.createTextNode("Student Info"));
+    h3.classList.add("highlight");
+
+    let p1 = document.createElement("p");
+    p1.appendChild(document.createTextNode("Name: Knight"));
+
+    let p2 = document.createElement("p");
+    p2.appendChild(document.createTextNode("City: Patna"));
+
+    div.appendChild(h3);
+    div.appendChild(p1);
+    div.appendChild(p2);
+
+    card.appendChild(div);
+</script>
+</body>
+</html>
