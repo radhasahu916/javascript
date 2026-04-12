@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="addText()">Add</button>
+<button onclick="removeText()">Remove</button>
+
+<div id="box"></div>
+
+<script>
+function addText() {
+    let p = document.createElement("p");
+    p.textContent = "New Text Added!";
+    document.getElementById("box").appendChild(p);
+}
+
+function removeText() {
+    let box = document.getElementById("box");
+    if (box.lastChild) {
+        box.removeChild(box.lastChild);
+    }
+}
+</script>
+
+</body>
+</html>
