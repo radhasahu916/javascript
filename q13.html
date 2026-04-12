@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="card">
+    <input name="card">
+    <input name="card">
+    <input name="card">
+    <button onclick="countcard()">countcard</button>
+    <p id="ans"> result</p>
+
+    <script>
+        function countcard(){
+            let x=document.getElementsByName("card");
+            document.getElementById("ans").innerHTML=x.length;
+        };
+    </script>
+
+</body>
+</html>

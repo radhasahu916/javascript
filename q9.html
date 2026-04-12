@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="slider" src="https://th.bing.com/th/id/OIP.AOXWyduL4cZE56fckQpapgHaHa?w=174&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" width="500px">
+       
+    <script>
+        let image=["https://th.bing.com/th?q=Short+Stem+Artificial+Flowers&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.5&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
+         "https://th.bing.com/th/id/OIP.RbiVZg00EX4YdaZmMIFSBgHaOU?w=115&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"];
+       
+        let i=0;
+        setInterval(function(){
+            i=(i+1)% image.length;
+            document.getElementById("slider").src=image[i];
+        },2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="timer">00</h1>
+<button onclick="stop()">stop</button>
+<script>
+    let sec=0;
+    let timer= setInterval (function(){
+        sec++;
+        document.getElementById("timer").innerHTML=sec;
+    },1000);
+
+    function stop(){
+        clearInterval(timer);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenior">
+        <div class="card">
+
+            <h2 id="name"> radha sahu</h2>
+            <p> rollno:42</p>
+        </div>
+    </div>
+    <button onclick="changeData()"> change data</button>
+
+    <script>
+
+        function changeData(){
+            let now=document.getElementById("name").innerHTML="rani sahu";
+            let card=document.querySelector(".card").style.border="2px solid black";
+            let name=document.getElementById("name");
+            let parent= name.parentNode;
+         parent.style.backgroundColor="red";
+    }
+    </script>
+</body>
+</html>
