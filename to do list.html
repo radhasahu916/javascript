@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Tasks</h1>
+
+<input type="text" id="taskInput" placeholder="Enter new task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList">
+    <li>
+        <input type="checkbox">
+        <span>Writing</span>
+        <button onclick="this.parentElement.remove()">Delete</button>
+    </li>
+    <li>
+        <input type="checkbox">
+        <span>Dancing</span>
+        <button onclick="this.parentElement.remove()">Delete</button>
+    </li>
+</ul>
+
+<script>
+    function addCheckboxEvent(checkbox) {
+        checkbox.addEventListener("change", function () {
+            let text = this.nextElementSibling;
+
+            if (this.checked) {
+                text.style.textDecoration = "line-through";
+            } else {
+                text.style.textDecoration = "none";
+            }
+        });
+    }
+
+    let checkboxes = document.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(function (cb) {
+        addCheckboxEvent(cb);
+    });
+
+    function addTask() {
+        let input = document.getElementById("taskInput");
+        let task = input.value.trim();
+
+        if (task === "") {
+            alert("Enter a task");
+            return;
+        }
+
+        let li = document.createElement("li");
+
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
+        let span = document.createElement("span");
+        span.textContent = task;
+
+        let deleteBtn = document.createElement("button");
+
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function () {
+            li.remove();
+        };
+
+        addCheckboxEvent(checkbox);
+
+        li.appendChild(checkbox);
+        li.appendChild(span);
+        li.appendChild(deleteBtn);
+
+        document.getElementById("taskList").appendChild(li);
+
+        input.value = "";
+    }
+</script>
+Now
+
+You accepted the message request
+Options<h1>My Tasks</h1>
+
+
+</body>
+</html>
